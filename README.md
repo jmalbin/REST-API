@@ -1,7 +1,7 @@
 # REST-API
 
 <h2>Description</h2>
-In this lab, I created a REST API 
+In this lab, I created a REST API that includes a list of medical records, including first and last name, phone number, SSN, and health status.  A REST API consists of 4 commands: Get, Post, Put, and Delete.  Get retrieves the intended data.  Post creates new data specified by the user.  Put updates already existing data.  Lastly, Delete removes data.  I used Postman in order to test this API.
 <br />
 
 
@@ -19,38 +19,38 @@ In this lab, I created a REST API
 <h2>Program walk-through:</h2>
 
 <p align="center">
-1. Run the program <br/>
-<img src="https://i.imgur.com/mb2Nqp2.png" height="80%" width="80%" alt="File Integrity Monitor Steps"/>
+1. Here, you can see the patients' records.  We will be using these in our test.  They will remain even if they are modified or deleted during the test. <br/>
+<img src="https://i.imgur.com/ju8r01D.png" height="80%" width="80%" alt="REST API Steps"/>
 <br />
 <br />
-2. Type "A" to create a baseline  <br/>
-<img src="https://i.imgur.com/NtIIWdY.png" height="80%" width="80%" alt="File Integrity Monitor Steps"/>
+2. To begin, we will enter the information in /records using Get in order to view the records.  As you can see, because the SSN is incorrect, an error message will display.  <br/>
+<img src="https://i.imgur.com/eTkobET.png" height="80%" width="80%" alt="REST API Steps"/>
 <br />
 <br />
-3. View the baseline.txt file in your folder to see if all of the files are there.  In this example, I added an extra file, e.txt. <br/>
-<img src="https://i.imgur.com/ByyCSWl.png" height="80%" width="80%" alt="File Integrity Monitor Steps"/>
+3. Likewise, you will also get an error if you enter the wrong name. <br/>
+<img src="https://i.imgur.com/MYJFx6s.png" height="80%" width="80%" alt="REST API Steps"/>
 <br />
 <br />
-4. Create another file in the Files folder and run it, typing B to monitor any changes.  The program will alert that a new file, f.txt in this case, has been created.  Delete the file or create a baseline after.  <br/>
-<img src="https://i.imgur.com/urK3U87.png" height="80%" width="80%" alt="File Integrity Monitor Steps"/>
+4. This is how it should look if all the information is accurate.  It will display the person's health status.  <br/>
+<img src="https://i.imgur.com/Ljn5Q8s.png" height="80%" width="80%" alt="REST API Steps"/>
 <br />
 <br />
-5. Modify one of the existing files.  In this case, I added a B character to the end of a.txt, which will change the file's hash value.  <br/>
-<img src="https://i.imgur.com/NVL532P.png" height="80%" width="80%" alt="File Integrity Monitor Steps"/>
+5. Note that you have to state in the body that you are looking for medical records specifically.  Any other requests are not allowed.  <br/>
+<img src="https://i.imgur.com/DjwF9q5.png" height="80%" width="80%" alt="REST API Steps"/>
 <br />
 <br />
-6. Monitor changes again.  You will be alerted that the following file has been changed.  Change the file back or update the baseline to remove the alert.  <br/>
-<img src="https://i.imgur.com/VhmXZ99.png" height="80%" width="80%" alt="File Integrity Monitor Steps"/>
+6. Now that we have Get done, we will now move onto Post.  Note that it is no longer searching in /records.  I entered a new set of data for a new person.  After sending it, it will be added to the list of patients.  <br/>
+<img src="https://i.imgur.com/VFhzt1A.png" height="80%" width="80%" alt="REST API Steps"/>
 <br />
 <br />
-7. Delete one of the files.  In this case, I chose e.txt since I created it beforehand.  Run and monitor again, and you will see an alert that says that the file has been deleted.  <br/>
-<img src="https://i.imgur.com/F8CYIwT.png" height="80%" width="80%" alt="File Integrity Monitor Steps"/>
+7. Next, we will use Put to update a patient's phone number.  My phone number has changed from 111-222-3333 to 123-456-7890.  <br/>
+<img src="https://i.imgur.com/EZRIrHh.png" height="80%" width="80%" alt="REST API Steps"/>
 <br />
 <br />
-8. Run the file again and update the baseline again to restore it back to it's original state.  <br/>
-<img src="https://i.imgur.com/qW2fsuW.png" height="80%" width="80%" alt="File Integrity Monitor Steps"/>
+8. Lastly, we will try to use Delete to remove a patient.  As you can see, Jane Doe was removed successfully.  <br/>
+<img src="https://i.imgur.com/mV4S4l1.png" height="80%" width="80%" alt="REST API Steps"/>
 <br />
 <br />
-9. You will see that there are now only 4 files in the baseline.  <br/>
-<img src="https://i.imgur.com/4Gm4JQA.png" height="80%" width="80%" alt="File Integrity Monitor Steps"/>
+9. We can confirm the deletion of Jane's patient records using Get.  <br/>
+<img src="https://i.imgur.com/lCC0gtb.png" height="80%" width="80%" alt="REST API Steps"/>
 </p>
